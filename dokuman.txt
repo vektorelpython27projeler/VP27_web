@@ -22,4 +22,4 @@ ctrl + C tuşuna basarak websitesi yayınını durdurabilirsiniz.
 * bir uygulamayı geliştirmeye başlamadan önce
 1- templates klasörü oluştur
 2- templates klasörü içine blog klasörü oluştur.
-3- blog klasörü içerisine "liste.html" dosyasını oluştur
+3- blog klasörü içerisine "liste.html" dosyasını oluştur    
