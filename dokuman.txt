@@ -1,0 +1,25 @@
+* web sayfası ve yönetici modülünü oluşturmak için 
+1-C:\Projelerim\WebSitesi
+2-VS Code ile bu klasörü açın
+3-ilk.py dosyasını oluştur.
+4-terminal penceresi aç
+5-python -V yaz
+6-pip install django yaz
+7-django-admin startproject websitesi .
+8-python manage.py migrate
+9-python manage.py createsuperuser
+Username : admin (enter)
+Email : aa@aa.com (enter)
+Password : 123456 (enter)
+Y tuşuna bas (enter)
+10-python manage.py runserver
+Tarıyıcıdan 127.0.0.1:8000 adresine girilebilir.
+11-127.0.0.1:8000/admin adresine girin
+Biraz önce oluşturulan kullanıcı bilglileri ile websitesinin arka planına erişebilirsiniz.
+ctrl + C tuşuna basarak websitesi yayınını durdurabilirsiniz. 
+* Bu web sayfasında bir uygulama oluşturmak için
+1-python manage.py startapp blog
+* bir uygulamayı geliştirmeye başlamadan önce
+1- templates klasörü oluştur
+2- templates klasörü içine blog klasörü oluştur.
+3- blog klasörü içerisine "liste.html" dosyasını oluştur
