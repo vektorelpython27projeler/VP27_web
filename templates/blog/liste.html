@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<a href={% url 'anasayfa' %}>Ana Sayfa</a>
     {% for gonderi in gonderis %}
     <a href="{% url 'gonderidetay' pk=gonderi.pk %}">
     <h1>{{gonderi.baslik}}</h1>
