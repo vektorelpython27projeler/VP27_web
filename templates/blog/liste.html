@@ -1,24 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends '../temel.html' %}
+{% block baslik %}Gönderilerin Listesi{% endblock baslik %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% block baslikcont %}İçerikler Listeleniyor{% endblock baslikcont %}
 
-<body>
+{% block icerik %}
 <a href={% url 'anasayfa' %}>Ana Sayfa</a><br>
 <a href={% url 'yenigonderi' %}>Yeni Gönderi</a><br>
-    {% for gonderi in gonderis %}
-    <a href="{% url 'gonderidetay' pk=gonderi.pk %}">
-    <h1>{{gonderi.baslik}}</h1>
-    </a>
-    <p>{{gonderi.yazi}}</p>
-    <br>
-    {% endfor %}
 
-</body>
+{% for gonderi in gonderis %}
+<section id="one">
+    <div class="inner">
+        <header class="major">
+            <a href="{% url 'gonderidetay' pk=gonderi.pk %}">
+                <h2>{{gonderi.baslik}}</h2>
+            </a>
+            <p>{{gonderi.yazi}}</p>
 
-</html>
+    </div>
+</section>
+{% endfor %}
+
+
+
+
+
+{% endblock icerik %}
