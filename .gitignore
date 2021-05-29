@@ -1,0 +1,4 @@
+
+*.pyc
+*.json
+blog/.DS_Store
