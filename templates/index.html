@@ -29,7 +29,12 @@
 						</ul>
 						<ul class="actions stacked">
 							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
+							{% if user.is_authenticated %}
+							<li><a href={% url 'logout' %} class="button fit">{{user.username}} -- Çıkış Yap </a></li>
+							{% else %}
+							<li><a href={% url 'login' %} class="button fit">Giriş Yap</a></li>
+							<li><a href={% url 'signup' %} class="button fit">Kayıt Ol</a></li>
+							{% endif %}
 						</ul>
 					</nav>
 
