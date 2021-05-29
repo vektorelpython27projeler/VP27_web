@@ -23,3 +23,18 @@ def yeniGonderi(request):
     else:
         form = BlogForm()
     return render(request,"blog/yenigonderi.html",{"form":form})
+
+from django.shortcuts import get_object_or_404
+
+def gonderiDuzenle(request,pk):
+    gonderi = get_object_or_404(BlogModel,pk=pk)
+    if request.method == "POST":
+        form = BlogForm(request.POST,instance=gonderi)
+        gonderi = form.save(commit=False)
+        gonderi.yayimzaman = timezone.now()
+        gonderi.save()
+        return redirect('gonderidetay',pk=gonderi.pk)
+    else:
+        form = BlogForm(instance=gonderi)
+    return render(request,"blog/gonderiduzenle.html",{"form":form})
+

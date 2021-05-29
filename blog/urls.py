@@ -6,4 +6,5 @@ urlpatterns = [
     #   adres,views bağlantısı, link ismi
     path('detay/<int:pk>',views.gonderidetay,name="gonderidetay"), # 127.0.0.1:8000/blog/detay/1
     path('yeni/',views.yeniGonderi,name="yenigonderi"),
+    path('duzenle/<int:pk>',views.gonderiDuzenle,name="gonderiDuzenle"),
 ]
