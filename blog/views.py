@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import BlogModel
+from .forms import BlogForm
 
 
 def listele(request):
@@ -10,3 +11,7 @@ def listele(request):
 def gonderidetay(request,pk):
     gonderi = BlogModel.objects.get(pk=pk)
     return render(request,"blog/detay.html",{"gonderi":gonderi})
+
+def yeniGonderi(request):
+    form = BlogForm()
+    return render(request,"blog/yenigonderi.html",{"form":form})
